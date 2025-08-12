@@ -16,6 +16,15 @@ const int MOD = 1e9 + 7;
 using ll = long long;
 
 void solve() {
+    int t;
+    cin >> t;
+    vector<pair<int,int>>query;
+    for(int i = 0; i < t; i++){
+        int row, col;
+        cin >> row >> col;
+        query.push_back({row,col});
+    }
+    
     
 }
 

@@ -16,7 +16,23 @@ const int MOD = 1e9 + 7;
 using ll = long long;
 
 void solve() {
+    long long n;
+    cin >> n;
     
+    while(n != 1){
+        cout << n << " ";
+        if(n%2 == 0){
+            n = n >> 1;
+        }
+        else{
+            n = n * 3;
+            n = n+1;
+        }
+    }
+
+    cout << 1;
+    return;
+
 }
 
 int main() {
