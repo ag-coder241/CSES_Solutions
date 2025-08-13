@@ -16,24 +16,21 @@ const int MOD = 1e9 + 7;
 using ll = long long;
 
 void solve() {
-    int n;
-    cin >> n;
-    
-    // zeroes is made by 2*5
-    // we have to find number of 2 and 5 in the prime factorisation
-    // ans = min(2, 5)
+    int k;
+    cin >> k;
+    for(int i = 0; i < k ; i++){
+        ll a,b;
+        cin >> a >> b;
 
-    int cnt = 0;
-    int p = 5; 
-    int k = n/p;
-    cnt = k;
-
-    while(k > 0){
-        k = k/p;
-        cnt += k;
+        ll p = (2 * a) - b;
+        ll q = (2 * b) - a;
+        if(p < 0 ||q < 0 || p % 3 != 0 || q % 3 != 0){
+            cout << "NO" << endl;
+        }
+        else{
+            cout << "YES" << endl;
+        }
     }
-
-    cout << cnt << endl;
     return;
     
 }
